@@ -186,13 +186,14 @@ func GetEventByAddress(storage *Storage, address string) (*EventDB, error) {
 
 func ComparePrices(oldPrice, newPrice int) bool {
 	if oldPrice != newPrice {
-		return true
 		fmt.Println("price is change")
+		return true
 	}
 	fmt.Println("price not change")
 	return false
 }
 
-func SendingPriceToEmail(email string) {
+func SendingPriceToEmail(email string) bool {
 	fmt.Println("sending to email about changing price", email)
+	return true
 }
